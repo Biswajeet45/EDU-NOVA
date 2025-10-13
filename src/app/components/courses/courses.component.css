@@ -1,0 +1,157 @@
+/* src/app/courses/courses.component.css */
+
+/* Background Styling */
+.courses-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, black, navy);
+    min-height: 100vh;
+  }
+  
+  /* Title Styling */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Course Card */
+  .course-card {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    margin: 10px 0;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #ff9ff3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .course-image {
+    width: 120px; /* Increased for better visibility */
+    height: 120px;
+    object-fit: cover; /* Ensures the image fills the box without distortion */
+    border-radius: 12px; /* Slightly more rounded corners */
+    margin-right: 15px;
+    flex-shrink: 0; /* Prevents shrinking in a flex container */
+    border: 3px solid #007bff; /* Adds a nice border for better styling */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for a premium look */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .course-image:hover {
+    transform: scale(1.1); /* Adds a subtle zoom effect on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .course-image {
+      width: 80px;
+      height: 80px;
+      margin-right: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .course-image {
+      width: 70px;
+      height: 70px;
+      margin-right: 10px;
+    }
+  }
+  
+  
+  /* Course Details */
+  .course-details {
+    flex: 1;
+  }
+  
+  .course-details h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2e3a87;
+  }
+  
+  .course-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  /* Enroll Button */
+  .enroll-button {
+    padding: 12px 18px;
+    color: white;
+    background: linear-gradient(to right, #ff0099, #493240);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .enroll-button:hover {
+    background: linear-gradient(to right, #e100ff, #7f00ff);
+    transform: scale(1.1);
+  }
+
+
+  
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff; /* Darker text for better visibility */
+  }
+  
+  .spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #3498db; /* ✅ Vibrant Blue for better visibility */
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* ✅ Improved 'No Courses Available' Message */
+  .no-courses-message {
+    text-align: center;
+    font-size: 20px;
+    color: #e74c3c; /* ✅ Deep Red for better visibility */
+    margin-top: 25px;
+    font-weight: bold;
+    background-color: #ffe6e6; /* Light red background */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  

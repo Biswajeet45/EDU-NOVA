@@ -1,0 +1,171 @@
+/* Centering the container */
+.register-container {
+  width: 380px;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #225494, #000000); /* Beautiful gradient */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading Styling */
+h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Fields */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Input Fields */
+input {
+  padding: 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Placeholder Color */
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Input Focus Effect */
+input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Stylish Register Button */
+button {
+  padding: 12px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background: linear-gradient(135deg, #fad0c4, #ff9a9e);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Login Link */
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-link p {
+  font-size: 14px;
+  color: #f8f9fa;
+  font-weight: bold;
+}
+
+.login-link a {
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.registering-message{
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .register-container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Password container to position the eye icon */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Input field inside password container */
+.password-container input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease-in-out;; /* Space for the eye icon */
+}:placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Eye icon styling */
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  top: -35px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+/* Eye icon hover effect */
+.eye-icon:hover {
+  color: #ffeb3b;
+}
+

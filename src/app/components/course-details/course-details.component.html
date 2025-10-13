@@ -1,0 +1,37 @@
+<!-- <div class="course-details-container" *ngIf="course$ | async as course">
+    <h1>{{ course.name }}</h1>
+    <img [src]="course.imageUrl" [alt]="course.name" />
+    <p>{{ course.description }}</p>
+    <p><strong>Duration:</strong> {{ course.duration }}</p>
+
+    <h2>Materials:</h2>
+    <ul>
+        <li *ngFor="let material of course.materials">{{ material }}</li>
+    </ul>
+
+    <div class="button-container">
+        <button routerLink="/courses" class="back-button">Back to Courses</button>
+        <button class="resource-button" [routerLink]="['/interface', course.id]">Open Resources</button>
+
+    </div>
+</div> 
+ 
+ -->
+
+ <div class="course-details-container" *ngIf="course$ | async as course">
+    <h1>{{ course.name }}</h1>
+    <img [src]="course.imageUrl" [alt]="course.name" />
+    <p>{{ course.description }}</p>
+   
+    <h2>Materials:</h2>
+    <ul>
+        <li *ngFor="let material of course.materials">
+            <h5>{{ material.title }}</h5>
+        </li>
+    </ul>
+
+    <div class="button-container">
+        <button routerLink="/courses" class="back-button">Back to Courses</button>
+        <button class="resource-button" [routerLink]="['/interface', course.id]">Open Resources</button>
+    </div>
+</div>

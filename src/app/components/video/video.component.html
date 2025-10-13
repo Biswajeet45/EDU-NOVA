@@ -1,0 +1,84 @@
+<!-- <div *ngIf="videoUrls.length > 0; else noVideos">
+  <h2>{{ materialTitle }}</h2>
+  <div *ngFor="let videoUrl of videoUrls">
+    <h3>{{ video.title }}</h3>
+    <iframe width="560" height="315" [src]="videoUrl | safeUrl" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<ng-template #noVideos>
+  <p>No videos available for this material.</p>
+</ng-template> -->
+<!-- 
+<div *ngIf="videoList.length > 0; else noVideos">
+  <h2>{{ materialTitle }}</h2>
+  <div *ngFor="let video of videoList">
+    <h3>{{ video.title }}</h3> 
+    <iframe width="560" height="315" [src]="video.url | safeUrl" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<ng-template #noVideos>
+  <p>No videos available for this material.</p>
+</ng-template> -->
+
+
+
+
+
+<div *ngIf="isLoading" class="loading-container">
+
+<div class="loader">
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
+
+<div class="container center">
+  <div class="rope center">
+    <div class="legs center">
+      <div class="boot-l"></div>
+      <div class="boot-r"></div>
+    </div>
+    <div class="costume center">
+      <div class="spider">
+        <div class="s1 center"></div>
+        <div class="s2 center"></div>
+        <div class="s3"></div>
+        <div class="s4"></div>
+      </div>
+      <div class="belt center"></div>
+      <div class="hand-r"></div>
+      <div class="hand-l"></div>
+      <div class="neck center"></div>
+      <div class="mask center">
+        <div class="eye-l"></div>
+        <div class="eye-r"></div>
+      </div>
+      <div class="cover center"></div>
+    </div>
+</div>
+</div>
+  <p>Loading videos...</p>
+</div>
+
+
+<div class="video-container" *ngIf="!isLoading && videoList.length > 0">
+  <h2 class="video-title">{{ materialTitle }}</h2>
+  <div class="video-list">
+    <div *ngFor="let video of videoList" class="video-item">
+      <h3 class="video-name">{{ video.title }}</h3>
+      <iframe 
+        class="video-frame"
+        [src]="video.url | safeUrl" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
+
+<p *ngIf="!isLoading && videoList.length === 0" class="no-videos">
+  No videos available for this material.
+</p>

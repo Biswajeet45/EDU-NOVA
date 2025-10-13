@@ -1,0 +1,36 @@
+<div class="main-container">
+  <!-- Left-hand Side: Study Materials -->
+  <div class="left-container">
+    <h2>Study Materials</h2>
+    <ul>
+      <li *ngFor="let material of studyMaterials; let i = index" (click)="unlockNextSection(i, material.id)"
+        [class.completed]="material.completed" [class.locked]="!material.unlocked">
+        {{ material.title }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Right-hand Side: Progress and Assignments -->
+  <div class="right-container">
+    <h2>Progress</h2>
+    <div class="progress-bar-container">
+      <div class="progress-bar" [style.width.%]="progress"></div>
+    </div>
+    <p>{{ progress }}% Complete</p>
+    <h2>Assignments</h2>
+    <div *ngFor="let material of studyMaterials; let i = index" class="assignment">
+      <button [disabled]="!material.assignmentUnlocked" (click)="startAssignment(i)"
+        [ngClass]="{'completed-btn': material.assignmentCompleted}">
+        {{ material.assignmentCompleted ? 'Completed' : (material.assignmentUnlocked ? 'Start Assignment' : 'Locked') }}
+        </button>
+          <!-- ✅ Score appears to the right of the button -->
+  <span *ngIf="material.assignmentCompleted" class="score-text">
+    Score: {{ material.score }}/10
+  </span>
+      
+    </div>
+  </div>
+</div>
+
+<!-- 
+<button (click)="addMaterials()">Add Study Materials</button> -->

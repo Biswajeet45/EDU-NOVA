@@ -1,0 +1,263 @@
+/* .main-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .left-container {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .right-container {
+    flex: 1;
+    background: #eef2ff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .progress-bar-container {
+    width: 100%;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: #4caf50;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 10px;
+    cursor: pointer;
+    background: #fff;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  li:hover {
+    background: #dbeafe;
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .assignment button {
+    padding: 8px 12px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .assignment button:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+   */
+
+/* Main Container */
+.main-container {
+  display: flex;
+  gap: 25px;
+  padding: 30px;
+  /* background: linear-gradient(135deg, #1e3c72, #2a5298);   */
+  background: #ffffff;
+
+}
+
+/* Left & Right Containers */
+.left-container, .right-container {
+  flex: 1;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 1.2rem; /* ✅ Slightly larger text */
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Left Container */
+.left-container {
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  
+}
+
+.left-container li{
+  background: linear-gradient(135deg, black, navy);
+  color: white;
+  font-weight: bolder;
+  margin: 30px;
+}
+.left-container li.completed{
+  background: linear-gradient(135deg, black, rgb(0, 128, 75));
+}
+
+.left-container h2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  color: black;
+}
+
+/* Right Container */
+.right-container {
+  background:linear-gradient(135deg, black, navy);
+  text-align: center;
+}
+.right-container h2,p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  color: yellow;
+}
+/* Hover Effect for Containers */
+.left-container:hover, .right-container:hover {
+  transform: scale(1.02);
+}
+.completed-btn {
+  background: linear-gradient(135deg, rgb(0, 255, 0), rgba(217, 255, 0, 0), rgba(217, 255, 0, 0.507)) !important;
+  color: white !important;
+  cursor: default !important;
+
+}
+/* .completed-btn {
+  background: linear-gradient(to right, green, black);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+} */
+
+.score-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #4CAF50, #2E7D32); /* Green gradient */
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-left: 10px; /* Adds spacing from the button */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.score-text:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+
+
+/* Progress Bar Container */
+.progress-bar-container {
+  width: 100%;
+  height: 25px;
+  background: #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(135deg, lime, #ffcc00);
+  transition: width 0.5s ease-in-out;
+}
+
+/* List Styles */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* List Items */
+li {
+  padding: 12px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ffffff, #f3f4f6);
+  margin: 8px 0;
+  border-radius: 8px;
+  font-size: 1.2rem; /* ✅ Bigger Text */
+  transition: background 0.3s, transform 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+/* Hover Effect */
+li:hover {
+  background: linear-gradient(135deg, #dbeafe, #b3cde0);
+  transform: scale(1.03);
+}
+
+/* Completed Task */
+li.completed {
+ 
+  color: #a0a0a0;
+}
+
+/* Buttons */
+.assignment button {
+  padding: 12px 16px;
+  border: none;
+  margin: 10px;
+  background: linear-gradient(135deg, #099880, #0cdee6);
+  color: black;
+  font-weight: bolder;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Hover Effect for Button */
+.assignment button:hover {
+  background: black;
+  color: #0cdee6;
+  transform: scale(1.05);
+}
+
+/* Disabled Button */
+.assignment button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-container {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .left-container, .right-container {
+      font-size: 1rem;
+  }
+
+  li {
+      font-size: 1rem;
+  }
+
+  .assignment button {
+      font-size: 1rem;
+
+  }
+}
+

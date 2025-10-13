@@ -1,0 +1,61 @@
+<!-- 
+<div class="courses-container">
+  <h2 class="title"><strong>Available Courses</strong></h2>
+
+  <div *ngIf="courses.length > 0; else noCourses">
+    <div class="courses-grid">
+      <div class="course-card" *ngFor="let course of courses">
+        <img [src]="course.imageUrl" [alt]="course.name" class="course-image" />
+        <div class="course-details">
+          <h3><strong>{{ course.name }}</strong></h3>
+          <p class="description"><strong>{{ course.description }}</strong></p>
+          <p class="duration"><strong>Duration:</strong> {{ course.duration }}</p>
+
+      
+          <button class="enroll-button" 
+                  (click)="handleEnrollment(course)">
+            <strong>{{ enrolledCourses.has(course.id!) ? 'Go to Course' : 'Enroll Now' }}</strong>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noCourses>
+    <p class="no-courses-message"><strong>No courses available at the moment.</strong></p>
+  </ng-template>
+</div> -->
+
+<div class="courses-container">
+  <h2 class="title"><strong>Available Courses</strong></h2>
+
+  <!-- ✅ Show Loading Spinner while fetching courses -->
+  <div *ngIf="isLoading" class="loading-container">
+    <div class="spinner"></div>
+    <p>Loading courses, please wait...</p>
+  </div>
+
+  <!-- ✅ Show courses once they are fetched -->
+  <div *ngIf="!isLoading && courses.length > 0">
+    <div class="courses-grid">
+      <div class="course-card" *ngFor="let course of courses">
+        <img [src]="course.imageUrl" [alt]="course.name" class="course-image" />
+        <div class="course-details">
+          <h3><strong>{{ course.name }}</strong></h3>
+          <p class="description"><strong>{{ course.description }}</strong></p>
+         
+          <!-- ✅ Change button text dynamically after enrollment -->
+          <button class="enroll-button" (click)="handleEnrollment(course)">
+            <strong>{{ enrolledCourses.has(course.id!) ? 'Go to Course' : 'Enroll Now' }}</strong>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Delayed "No Courses Available" Message -->
+  <p *ngIf="!isLoading && courses.length === 0 && showNoCoursesMessage" class="no-courses-message">
+    <strong>No courses available at the moment.</strong>
+  </p>
+</div>

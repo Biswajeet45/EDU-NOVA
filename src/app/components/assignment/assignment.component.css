@@ -1,0 +1,173 @@
+  /* 🎯 Main Assignment Container */
+  .assignment-container {
+      max-width: 90%;
+      margin: 40px auto;
+      padding: 25px;
+      background: linear-gradient(135deg, #cfcfcf 25%,#0000003a 100%);
+      border-radius: 12px;
+      box-shadow: 0px 5px 15px rgb(82, 82, 82);
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .assignment-container:hover {
+      transform: scale(1.02);
+     
+    }
+    
+    /* 🎯 Assignment Title */
+    .assignment-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    /* 🎯 Score Display */
+    .score-container {
+      background: rgba(46, 204, 113, 0.2);
+      padding: 14px;
+      border-radius: 8px;
+      color: #2ecc71;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* 🎯 MCQ Heading */
+    .mcq-heading {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #34495e;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    /* 🎯 MCQ Form */
+    .mcq-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    /* 🎯 Each MCQ Item */
+    .mcq-item {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .mcq-item:hover {
+      transform: scale(1.02);
+    }
+    
+    /* 🎯 MCQ Question */
+    .mcq-question {
+      font-size: 18px;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      border-left: 4px solid #3498db;
+      padding-left: 10px;
+      text-align: left;
+    }
+    
+    /* 🎯 MCQ Options */
+    .mcq-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .mcq-option {
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-radius: 6px;
+      transition: 0.3s;
+      background: #f4f6f9;
+      border: 2px solid transparent;
+    }
+    
+    .mcq-option:hover {
+      background: #e0eafc;
+      border-color: #3498db;
+    }
+    
+    /* 🎯 Radio Button Styling */
+    .mcq-option input {
+      margin-right: 8px;
+      width: 18px;
+      height: 18px;
+      accent-color: #3498db;
+    }
+    
+    /* 🎯 Correct Answer Highlight */
+    .correct-answer {
+      margin-top: 10px;
+      padding: 8px;
+      color: #27ae60;
+      font-weight: bold;
+      font-size: 16px;
+      background: rgba(39, 174, 96, 0.1);
+      border-radius: 6px;
+    }
+    
+    /* 🎯 No Questions Message */
+    .no-questions {
+      font-size: 20px;
+      color: #e74c3c;
+      font-weight: bold;
+      padding: 15px;
+      border-radius: 8px;
+      background: rgba(231, 76, 60, 0.1);
+    }
+    
+    /* 🎯 Submit Button */
+    .submit-btn {
+      margin-top: 30px;
+      padding: 12px 28px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .submit-btn:hover {
+      background: linear-gradient(135deg, #2980b9, #1f618d);
+    }
+    
+    .submit-btn:disabled {
+      background: #bdc3c7;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    
+    /* 🎯 Responsive Design */
+    @media (max-width: 600px) {
+      .assignment-container {
+        padding: 15px;
+      }
+    
+      .mcq-item {
+        padding: 15px;
+      }
+    
+      .submit-btn {
+        width: 100%;
+      }
+    }
+        

@@ -1,0 +1,117 @@
+<!-- <h2>Assignment for {{ materialTitle }}</h2>
+<p>Course ID: {{ courseId }}</p>
+<p>Material ID: {{ materialId }}</p> -->
+
+<!-- Assignment Form -->
+<!-- <form (ngSubmit)="submitAssignment()">
+  <label for="answer">Your Answer:</label>
+  <textarea id="answer" [(ngModel)]="assignmentAnswer" name="answer" required></textarea>
+
+  <button type="submit" [disabled]="assignmentSubmitted">
+    {{ assignmentSubmitted ? 'Submitted' : 'Submit Assignment' }}
+  </button>
+</form> -->
+
+<!-- Submission Status -->
+<!-- <p *ngIf="assignmentSubmitted" class="success-message">
+  Assignment submitted successfully! Next study material unlocked.
+</p> -->
+
+
+<!-- <div class="assignment-container">
+  <h2 class="assignment-title">{{ materialTitle }}</h2> -->
+
+  <!-- ✅ Show Loading while fetching data -->
+  <!-- <div *ngIf="isLoading" class="loading-container">
+    <div class="loader">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <p>Loading assignment...</p>
+  </div> -->
+
+  <!-- ✅ Show Assignment Form only after loading -->
+  <!-- <div *ngIf="!isLoading">
+    <div *ngIf="mcqList.length > 0; else noQuestions">
+      <h3 class="mcq-heading">Answer the following MCQs:</h3>
+      <form class="mcq-form">
+        <div *ngFor="let mcq of mcqList; let i = index" class="mcq-item">
+          <p class="mcq-question">{{ i + 1 }}. {{ mcq.question }}</p>
+
+          <div class="mcq-options">
+            <label *ngFor="let option of mcq.options" class="mcq-option">
+              <input
+                type="radio"
+                [name]="'mcq' + i"
+                [value]="option"
+                [(ngModel)]="mcq.selectedAnswer"
+              />
+              {{ option }}
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <ng-template #noQuestions>
+      <p class="no-questions">No MCQs available for this assignment.</p>
+    </ng-template> -->
+
+    <!-- ✅ Submit Button -->
+    <!-- <button class="submit-btn" (click)="submitAssignment()" [disabled]="mcqList.length === 0">
+      Submit Assignment
+    </button>
+  </div>
+</div> -->
+
+
+  <div class="assignment-container">
+    <h2 class="assignment-title">{{ materialTitle }}</h2>
+
+    <!-- ✅ Show Score only if assignment was completed -->
+<div *ngIf="userScore !== null" class="score-container">
+  <h3>Previous Score: {{ userScore }} / {{ mcqList.length }}</h3>
+</div>
+
+
+    <div *ngIf="mcqList.length > 0; else noQuestions">
+      <h3 class="mcq-heading">Answer the following MCQs:</h3>
+      <form class="mcq-form">
+        <div *ngFor="let mcq of mcqList; let i = index" class="mcq-item">
+          <p class="mcq-question">{{ i + 1 }}. {{ mcq.question }}</p>
+
+          <div class="mcq-options">
+            <label *ngFor="let option of mcq.options" class="mcq-option">
+              <input
+  type="radio"
+  [name]="'mcq' + i"
+  [value]="option"
+  [(ngModel)]="mcq.selectedAnswer"
+  [disabled]="assignmentSubmitted || userScore !== null"
+/>
+ 
+              {{ option }}
+            </label>
+          </div>
+
+          <!-- ✅ Highlight Correct Answer if revisiting -->
+          <p *ngIf="userScore !== null" class="correct-answer">
+            ✅ Correct Answer: {{ mcq.correctAnswer }}
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <ng-template #noQuestions>
+      <p class="no-questions">No MCQs available for this assignment.</p>
+    </ng-template>
+
+    <!-- ✅ Show Submit Button only if assignment is NOT already completed -->
+    <button 
+      class="submit-btn" 
+      (click)="submitAssignment()" 
+      [disabled]="assignmentSubmitted || userScore !== null">
+      Submit Assignment
+    </button>
+  </div>

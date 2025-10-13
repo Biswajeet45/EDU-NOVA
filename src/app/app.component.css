@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap');
+.bona-nova-sc-regular { 
+  font-family: "Bona Nova SC", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: xx-large;  /* Keep this font size */
+  line-height: 1.2;  
+  transform: scale(0.9); 
+}
+
+.edu-text {
+  color: white;  /* Make 'Edu' white */
+}
+
+.nova-text {
+  color: black;  /* Make 'Nova' black */
+}
+.container{
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+   .custom-btn {
+    /* background: linear-gradient(135deg, #3a8eff, #1d63ff); */
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 30px;
+    min-width: 120px; 
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 3D effect */
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, #1d63ff, #3a8eff); /* Reverse gradient */
+    color: #fff;
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+}
+
+/* Adding a glow effect */
+.custom-btn:focus,
+.custom-btn:active {
+    box-shadow: 0 0 15px rgba(42, 152, 255, 0.8), 0 0 30px rgba(42, 152, 255, 0.6);
+}
+
+/* Button hover effect with animation */
+.custom-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0;
+}
+
+.custom-btn:hover::before {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+/* 🌟 Profile Dropdown - Glassmorphism with Neon Glow */
+.dropdown-menu {
+  background: linear-gradient(135deg, black, navy); /* Soft blue gradient */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px); /* Stronger Glassmorphism effect */
+  border-radius: 12px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  min-width: 270px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(-12px) scale(0.98);
+  visibility: hidden;
+}
+
+/* 🚀 Show dropdown with smooth fade & glow effect */
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  visibility: visible;
+  box-shadow: 0 0 15px rgba(30, 120, 255, 0.6); /* 🔵 Blue glow */
+}
+
+/* ✅ User Info - Bold & Vibrant */
+.dropdown-menu .dropdown-item.text-primary {
+  font-weight: bold;
+  color: #ffffff !important;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: transparent !important;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dropdown-menu .dropdown-item.text-muted {
+  color: #e0e0e0 !important;  /* Light gray */
+  font-size: 15px;
+  background: transparent !important;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 📌 Enrolled Courses Styling */
+.enrolled-courses-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.enrolled-course-item {
+  color: #dddddd;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
+}
+
+/* 🚀 Hover Glow on Enrolled Courses */
+.enrolled-course-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+/* 🔥 Logout Button - Stylish Glow Effect */
+.dropdown-menu .dropdown-item.text-danger {
+  color: #ff4747 !important;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  border: 2px solid transparent;
+}
+
+/* 🔥 Logout Hover Effect */
+.dropdown-menu .dropdown-item.text-danger:hover {
+  background: rgba(255, 71, 71, 0.3);
+  color: white !important;
+  transform: scale(1.1);
+  border-color: #ff4747;
+  box-shadow: 0 0 15px rgba(255, 71, 71, 0.9);
+}
+
+/* ✨ Dropdown Divider */
+.dropdown-menu .dropdown-divider {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 🎨 User Profile Icon */
+
+/* 🌟 Drop Shadow for Profile Button */
+.custom-btn.dropdown-toggle {
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 10px 22px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🟢 Profile Button Hover Effect */
+.custom-btn.dropdown-toggle:hover {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+  .footer-container {
+  background: #222; /* Dark background */
+  padding: 20px 0;
+  color: white;
+  border-top: none !important; /* Ensures no top border */
+  box-shadow: none !important; /* Removes any shadow */
+}
+
+  
+  .footer-container footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+  }
+  
+  /* Social Icons */
+  .social-icon {
+    font-size: 28px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+  /* Instagram */
+  .social-icon.instagram {
+    color: #e4405f;
+  }
+  
+  .social-icon.instagram:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(228, 64, 95, 0.8);
+  }
+  
+  /* Twitter (X) */
+  .social-icon.twitter {
+    color: #1DA1F2;
+  }
+  
+  .social-icon.twitter:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(29, 161, 242, 0.8); 
+  }
+  
+  /* Facebook */
+  .social-icon.facebook {
+    color: #1877F2;
+  }
+  
+  .social-icon.facebook:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(24, 119, 242, 0.8);
+  }
+  
+  /* LinkedIn */
+  .social-icon.linkedin {
+    color: #0A66C2;
+  }
+  
+  .social-icon.linkedin:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(10, 102, 194, 0.8);
+  }
+  
+
+
+
+
+
+
+
+
+  /* Responsive */
+  @media (max-width: 820px) {
+    .footer-container footer {
+      flex-direction: column;
+      text-align: center;
+    }
+    .nav-item{
+      margin-bottom:4px;
+    }
+   button.navbar-toggler{
+    position: relative;
+    left: -10px;
+   }
+    .nav {
+      margin-top: 15px;
+    }
+  }
+  

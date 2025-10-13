@@ -1,0 +1,103 @@
+/* Ensure specific text elements are styled properly */
+h1, h2, h3, h4, h5, h6, p, span, li {
+  color: whitesmoke !important;
+  font-weight: bold !important;
+}
+
+/* Ensure course details are styled */
+.course-details {
+  color: yellow !important;
+  font-weight: bold !important;
+}
+
+/* Course Details Container - Vibrant and Eye-catching */
+.course-details-container {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 650px;
+  padding: 25px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, black, navy);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+} 
+
+.course-details-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Course Image Styling */
+.course-details-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* List Styling */
+.course-details-container ul {
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+}
+
+.course-details-container ul li {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* List Icons */
+.course-details-container ul li::before {
+  content: "✔";
+  color: #ffeb3b;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Buttons */
+/* Button Container - Ensures Space Between Buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* ✅ Increased space between buttons */
+  margin-top: 20px;
+}
+
+/* Button Styling */
+.back-button, .resource-button {
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  color:black;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bolder;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.back-button:hover, .resource-button:hover {
+  background: black;
+  color: orange;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .button-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px; /* ✅ Space between buttons in mobile view */
+  }
+
+  .back-button, .resource-button {
+      width: 80%; /* ✅ Buttons take more width on smaller screens */
+  }
+}

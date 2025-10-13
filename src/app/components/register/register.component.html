@@ -1,0 +1,124 @@
+<!-- <div class="register-container">
+    <h2>Register Here</h2>
+    <form (ngSubmit)="register()">
+      <div>
+        <label for="name">Name:</label>
+        <input id="name" [(ngModel)]="name" name="name" type="text" required />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" [(ngModel)]="email" name="email" type="email" required />
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input id="password" [(ngModel)]="password" name="password" type="password" required />
+      </div>
+      <div>
+        <label for="reenterPassword">Re-enter Password:</label>
+        <input id="reenterPassword" [(ngModel)]="reenterPassword" name="reenterPassword" type="password" required />
+      </div>
+      <button type="submit">Click to Register</button>
+    </form>
+   
+    <div class="login-link">
+      <p>Already have an account? <a routerLink="/login">Go to Login</a></p>
+    </div>
+  </div> -->
+
+  <!-- <div class="register-container">
+    <h2>Register Here</h2>
+  
+    <form (ngSubmit)="register()">
+      <div>
+        <label for="name">Name:</label>
+        <input id="name" [(ngModel)]="name" name="name" type="text" required />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" [(ngModel)]="email" name="email" type="email" required />
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input id="password" [(ngModel)]="password" name="password" type="password" required />
+        <span class="eye-icon" (click)="togglePasswordVisibility()">
+          <i [class]="showPassword ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+        </span>
+      </div>
+      <div >
+        <label for="reenterPassword">Re-enter Password:</label>
+        <div class="password-container">
+        <input id="reenterPassword"  [(ngModel)]="reenterPassword" name="reenterPassword" type="password" required />
+        <span class="eye-icon " (click)="togglePasswordVisibility()">
+          <i [class]="showPassword ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+        </span></div>
+      </div>
+  
+      <button type="submit" [disabled]="isRegistering">Click to Register</button>
+    </form>
+  
+    <div class="login-link">
+      <p>Already have an account? <a routerLink="/login">Go to Login</a></p>
+    </div>
+  </div>
+  
+  <div class="reg-container">
+    
+  </div> -->
+
+  
+  <div class="register-container">
+    <h2>Register Here</h2>
+  
+    <form (ngSubmit)="register()">
+      <!-- Name Input -->
+      <div>
+        <label for="name">Name:</label>
+        <input id="name" [(ngModel)]="name" name="name" type="text" required />
+      </div>
+  
+      <!-- Email Input -->
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" [(ngModel)]="email" name="email" type="email" required />
+      </div>
+  
+      <!-- Password Input -->
+      
+        <label for="password">Password:</label>
+        <input
+          id="password"
+          [(ngModel)]="password"
+          name="password"
+          [type]="showPassword ? 'text' : 'password'"
+          required
+        /><div class="password-container">
+        <span class="eye-icon" (click)="togglePasswordVisibility('password')">
+          <i [class]="showPassword ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+        </span>
+      </div>
+  
+      <!-- Re-enter Password Input -->
+      
+        <label for="reenterPassword">Re-enter Password:</label>
+        <input
+          id="reenterPassword"
+          [(ngModel)]="reenterPassword"
+          name="reenterPassword"
+          [type]="showReenterPassword ? 'text' : 'password'"
+          required
+        /><div class="password-container">
+        <span class="eye-icon" (click)="togglePasswordVisibility('reenterPassword')">
+          <i [class]="showReenterPassword ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+        </span>
+      </div>
+  
+      <!-- Register Button -->
+      <button type="submit" [disabled]="isRegistering">Click to Register</button>
+    </form>
+  
+    <!-- Login Redirect -->
+    <div class="login-link">
+      <p>Already have an account? <a routerLink="/login">Go to Login</a></p>
+    </div>
+  </div>
+  
