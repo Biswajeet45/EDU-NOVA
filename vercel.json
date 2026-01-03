@@ -1,7 +1,7 @@
 {
-  "framework": "angular",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/my-dream-app",
+  "framework": null,
+  "buildCommand": "npx ng build -c production",
+  "outputDirectory": "dist/edu-nova-main",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
