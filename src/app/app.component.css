@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: white; 
+  display: flex;
+  flex-direction: column;
+}
+
+
 .bona-nova-sc-regular { 
   font-family: "Bona Nova SC", serif;
   font-weight: 700;
@@ -203,11 +215,14 @@ align-items: center;
 
 
   .footer-container {
-  background: #222; /* Dark background */
+   background: #000; /* Dark background */
   padding: 20px 0;
   color: white;
-  border-top: none !important; /* Ensures no top border */
-  box-shadow: none !important; /* Removes any shadow */
+  border-top: none !important;
+  box-shadow: none !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  background-color: #000 !important;
 }
 
   
@@ -268,14 +283,6 @@ align-items: center;
     box-shadow: 0 0 10px rgba(10, 102, 194, 0.8);
   }
   
-
-
-
-
-
-
-
-
   /* Responsive */
   @media (max-width: 820px) {
     .footer-container footer {
