@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-dream-app": {
+    "edu-nova-main": {
       "projectType": "application",
       "schematics": {},
       "root": "",
