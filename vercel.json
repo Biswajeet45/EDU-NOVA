@@ -1,7 +1,7 @@
 {
+  "framework": "angular",
   "buildCommand": "npm run build",
   "outputDirectory": "dist/my-dream-app",
-  "framework": null,
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]

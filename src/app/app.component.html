@@ -1,167 +1,123 @@
-<nav
- class="navbar navbar-expand-lg navbar-light bg-secondary"
- style="font-family: 'Roboto', sans-serif; font-weight: bold; z-index: 2;"
->
- <a class="navbar-brand ms-3 bona-nova-sc-regular" routerLink="/welcome">
-   <span class="edu-text">Edu</span><span class="nova-text">Nova</span>
- </a>
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary"
+     style="font-family: 'Roboto', sans-serif; font-weight: bold; z-index: 2;">
+  
+  <a class="navbar-brand ms-3 bona-nova-sc-regular" routerLink="/welcome">
+    <span class="edu-text">Edu</span><span class="nova-text">Nova</span>
+  </a>
 
- <button
-   class="navbar-toggler"
-   type="button"
-   data-bs-toggle="collapse"
-   data-bs-target="#navbarNav"
-   aria-controls="navbarNav"
-   aria-expanded="false"
-   aria-label="Toggle navigation"
- >
-   <span class="navbar-toggler-icon"></span>
- </button>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
- <div class="collapse navbar-collapse" id="navbarNav">
-   <ul class="navbar-nav ms-auto me-3">
-     <li class="nav-item ms-3 font-weight-bold" *ngIf="shouldShow('About')">
-       <button class="btn custom-btn" routerLink="/about" type="button">About</button>
-     </li>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto me-3">
+      
+      <li class="nav-item ms-3 font-weight-bold" *ngIf="shouldShow('About')">
+        <button class="btn custom-btn" routerLink="/about" type="button">About</button>
+      </li>
 
-     <li class="nav-item ms-3 font-weight-bold" *ngIf="shouldShow('Courses')">
-       <button class="btn custom-btn" routerLink="/courses" type="button">Courses</button>
-     </li>
+      <li class="nav-item ms-3 font-weight-bold" *ngIf="shouldShow('Courses')">
+        <button class="btn custom-btn" routerLink="/courses" type="button">Courses</button>
+      </li>
 
-     <li class="nav-item ms-3 font-weight-bold" *ngIf="shouldShow('welcome')">
-       <button class="btn custom-btn" routerLink="/welcome" type="button">Home</button>
-     </li>
+      <li class="nav-item ms-3 font-weight-bold" *ngIf="shouldShow('welcome')">
+        <button class="btn custom-btn" routerLink="/welcome" type="button">Home</button>
+      </li>
 
-     <li class="nav-item ms-3 font-weight-bold" *ngIf="shouldShow('Login')">
-       <button class="btn custom-btn" routerLink="/login" type="button">Login</button>
-     </li>
+      <li class="nav-item ms-3 font-weight-bold" *ngIf="shouldShow('Login')">
+        <button class="btn custom-btn" routerLink="/login" type="button">Login</button>
+      </li>
 
-     <!-- <li class="nav-item dropdown ms-3 font-weight-bold" *ngIf="shouldShow('Profile')">
-      <button class="btn custom-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
-        <i class="fas fa-user-circle me-2"></i> Profile
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end p-3 rounded-3 shadow-sm">
-        <li>
-          <a class="dropdown-item text-primary fw-semibold">{{ userName }}</a>
-        </li>
-        <li>
-          <a class="dropdown-item text-muted">{{ userEmail }}</a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-        <li>
-          <button class="dropdown-item text-danger fw-semibold" (click)="logout()">Logout</button>
-        </li>
-      </ul>
-    </li> -->
+      <!-- Profile Dropdown -->
+      <li class="nav-item dropdown ms-3 font-weight-bold" *ngIf="shouldShow('Profile')">
+        <button class="btn custom-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+          <i class="fas fa-user-circle user-icon"></i> Profile
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end p-3 rounded-3 shadow-sm">
 
-    <li class="nav-item dropdown ms-3 font-weight-bold" *ngIf="shouldShow('Profile')">
-      <button class="btn custom-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
-        <i class="fas fa-user-circle user-icon"></i> Profile
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end p-3 rounded-3 shadow-sm">
-        <li>
-          <a class="dropdown-item text-primary">
-            <i class="fas fa-user-circle user-icon"></i> {{ userName }}
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item text-muted">
-            <i class="fas fa-envelope user-icon"></i> {{ userEmail }}
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-    
-        <!-- ✅ Enrolled Courses Section -->
-        <li *ngIf="enrolledCourses$ | async as enrolledCourses">
-          <p class="dropdown-header enrolled-courses-title">📚 Enrolled Courses:</p>
-          <ul *ngIf="enrolledCourses.length > 0; else noEnrolledCourses" class="list-unstyled">
-            <li *ngFor="let course of enrolledCourses">
-              <a class="dropdown-item enrolled-course-item" [routerLink]="['/course-details', course.id]">
-                {{ course.name }}
-              </a>
-            </li>
-          </ul>
-          <ng-template #noEnrolledCourses>
-            <p class="text-light small text-center">No enrolled courses.</p>
-          </ng-template>
-        </li>
-    
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-        <li>
-          <button class="dropdown-item text-danger fw-semibold" (click)="logout()">🚪 Logout</button>
-        </li>
-      </ul>
-    </li>
-    
-    
-   </ul>
- </div>
+          <li>
+            <a class="dropdown-item text-primary">
+              <i class="fas fa-user-circle user-icon"></i> {{ userName }}
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item text-muted">
+              <i class="fas fa-envelope user-icon"></i> {{ userEmail }}
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <!-- Enrolled Courses -->
+          <li *ngIf="enrolledCourses$ | async as enrolledCourses">
+            <p class="dropdown-header enrolled-courses-title">📚 Enrolled Courses:</p>
+            <ul *ngIf="enrolledCourses.length > 0; else noEnrolledCourses" class="list-unstyled mb-0">
+              <li *ngFor="let course of enrolledCourses">
+                <a class="dropdown-item enrolled-course-item" [routerLink]="['/course-details', course.id]">
+                  {{ course.name }}
+                </a>
+              </li>
+            </ul>
+            <ng-template #noEnrolledCourses>
+              <p class="text-light small text-center mb-0">No enrolled courses.</p>
+            </ng-template>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <button class="dropdown-item text-danger fw-semibold" (click)="logout()">🚪 Logout</button>
+          </li>
+
+        </ul>
+      </li>
+
+    </ul>
+  </div>
 </nav>
 
+<!-- ===================== ROUTER OUTLET ===================== -->
 <router-outlet></router-outlet>
 
-<div class="footer-container">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer-container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 bg-dark text-light">
 
-    <!-- Left side -->
-    <div class="col-md-4 d-flex align-items-center">
-      <a
-        href="/"
-        class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
-      >
-        <svg class="bi" width="30" height="24">
-          <use xlink:href="#bootstrap"></use>
-        </svg>
-      </a>
+  <!-- Left side -->
+  <div class="col-md-4 d-flex align-items-center">
+    <a href="/" class="mb-3 me-2 mb-md-0 text-decoration-none lh-1">
+      <svg class="bi" width="30" height="24">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+    </a>
+    <span class="mb-3 mb-md-0">
+      <strong>© {{ currentYear }} EduNova. All rights reserved.</strong>
+    </span>
+  </div>
 
-      <span class="mb-3 mb-md-0 text-light">
-        <strong>© {{ currentYear }} EduNova. All rights reserved.</strong>
-      </span>
-    </div>
-
-    <!-- Right side social icons -->
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+  <!-- Right side social icons -->
+  <div class="col-md-4 d-flex justify-content-end">
+    <ul class="nav list-unstyled d-flex mb-0">
       <li class="ms-3">
-        <a
-          class="social-icon instagram"
-          href="https://www.instagram.com/_mr_biswajeet/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="social-icon instagram" href="https://www.instagram.com/_mr_biswajeet/" target="_blank" rel="noopener noreferrer">
           <i class="bi bi-instagram"></i>
         </a>
       </li>
-
       <li class="ms-3">
-        <a
-          class="social-icon twitter"
-          href="https://x.com/Biswa42"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="social-icon twitter" href="https://x.com/Biswa42" target="_blank" rel="noopener noreferrer">
           <i class="bi bi-twitter-x"></i>
         </a>
       </li>
-
       <li class="ms-3">
-        <a
-          class="social-icon linkedin"
-          href="https://www.linkedin.com/in/biswajeet-sahu-318419235/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="social-icon linkedin" href="https://www.linkedin.com/in/biswajeet-sahu-318419235/" target="_blank" rel="noopener noreferrer">
           <i class="bi bi-linkedin"></i>
         </a>
       </li>
     </ul>
+  </div>
 
-  </footer>
-</div>
-
-
+</footer>
