@@ -1,8 +1,9 @@
 {
-  "framework": null,
-  "buildCommand": "npx ng build -c production",
-  "outputDirectory": "dist/edu-nova-main",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "version": 2,
+  "builds": [
+    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist/edu-nova-main" } }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
