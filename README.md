@@ -4,7 +4,7 @@ A modern, responsive, and fully dynamic educational platform built using Angular
 
 ## 🚀 Live Demo
 
-🔗 [View Edu Nova Live](https://edu-nova-lyart.vercel.app/)
+🔗 [View Edu Nova Live](https://edu-nova-45.vercel.app/)
 
 ## 🛠️ Tech Stack
 
